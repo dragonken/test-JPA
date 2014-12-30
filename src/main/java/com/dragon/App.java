@@ -21,12 +21,12 @@ public class App {
 
 		em.getTransaction().begin();
 		Contact c = new Contact();
-		c.setAddress1("ABC");
+		c.setAddress1("ABCDe");
 		em.persist(c);
 		em.getTransaction().commit();
 		
 		// read the existing entries and write to console
-		Query q = em.createQuery("select c FROM contact c");
+		Query q = em.createQuery("select * FROM CONTACT");
 		List<Contact> contactList = q.getResultList();
 	
 
@@ -36,5 +36,7 @@ public class App {
 		System.out.println("Size: " + contactList.size());
 
 	}
+	
+	
 
 }

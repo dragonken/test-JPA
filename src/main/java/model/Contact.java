@@ -1,25 +1,21 @@
 package model;
 
 import java.io.Serializable;
-
 import javax.persistence.*;
 
-import org.eclipse.persistence.annotations.Index;
 
 /**
- * The persistent class for the contact database table.
+ * The persistent class for the CONTACT database table.
  * 
  */
 @Entity
-@NamedQuery(name = "Contact.findAll", query = "SELECT c FROM Contact c")
+@NamedQuery(name="Contact.findAll", query="SELECT c FROM Contact c")
 public class Contact implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Index
 	private String address1;
 
 	private String address2;
